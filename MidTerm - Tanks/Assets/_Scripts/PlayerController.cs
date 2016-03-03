@@ -5,7 +5,6 @@ public class PlayerController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++
 	public float speed;
 	public Boundary boundary;
-
 	// get a reference to the camera to make mouse input work
 	public Camera camera; 
 	
@@ -39,7 +38,6 @@ public class PlayerController : MonoBehaviour {
 		// movement by mouse
 		Vector2 mousePosition = Input.mousePosition;
 		this._newPosition.x = this.camera.ScreenToWorldPoint (mousePosition).x;
-
 		this._BoundaryCheck ();
 
 		gameObject.GetComponent<Transform>().position = this._newPosition;

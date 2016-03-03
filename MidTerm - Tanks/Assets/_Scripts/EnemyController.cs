@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	public Speed speed;
 	public Boundary boundary;
+    public GameController gameController;
 
 	// PRIVATE INSTANCE VARIABLES
 	private float _CurrentSpeed;
@@ -34,6 +35,7 @@ public class EnemyController : MonoBehaviour {
 		
 		// Check bottom boundary
 		if (currentPosition.y <= boundary.yMin) {
+            gameController.ScoreValue += 10;
 			this._Reset();
 		}
 	}
